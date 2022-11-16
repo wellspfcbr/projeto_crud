@@ -1,5 +1,5 @@
 import {Model, DataTypes} from 'sequelize'
-import { sequelize } from '../Config/mysql'
+import {sequelize} from '../Config/mysql'
 
 export interface UsuarioInstance extends Model{
     id: number
@@ -20,6 +20,6 @@ export const Usuario = sequelize.define<UsuarioInstance>("Usuario,",{
         type: DataTypes.STRING
     },
 },{
-    tableName:'usuarios',
+    tableName:'usuario',
     timestamps:false
 })
