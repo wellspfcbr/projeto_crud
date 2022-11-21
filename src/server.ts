@@ -17,7 +17,6 @@ server.engine('mustache',mustache())
 
 //caminho da pasta public
 
-
 server.use(express.static(path.join(__dirname,'../public')))
 
 //habilitar o post

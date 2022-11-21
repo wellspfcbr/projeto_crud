@@ -13,9 +13,11 @@ router.get('/cadastro',usuarioController.cadastro)
 //criando controller para receber os dados
 router.post('/cadastro',usuarioController.cadastroUsuario)
 
-router.get('/editar/..id',usuarioController.editaUsuario)
+router.get('/editar/:id',usuarioController.editaUsuario)
 
-router.get('excluir',usuarioController.excluiUsuario)
+router.post('/editar/:id',usuarioController.atualizaUsuario)
+
+router.get('/excluir/:id',usuarioController.excluiUsuario)
 
 
 

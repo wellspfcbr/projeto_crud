@@ -19,12 +19,13 @@
         <td>{{nome}}</td>
         <td>{{email}}</td>
     <td>
-        <a href="/editar/{{id}}">[ Editar ]</a>
-        <a href="/excluir/{{id}}">[ Excluir ]</a>
+        <a href="/editar/{{id}}" onclick="return confirm('editar ?')"><img src="" alt=""></a>
+        <a href="/excluir/{{id}}" onclick="return confirm('Tem certeza que deseja exluir?')">[ Excluir ]</a>
     </td>
 </tr>
 
     {{/users}}
+
 
 
 

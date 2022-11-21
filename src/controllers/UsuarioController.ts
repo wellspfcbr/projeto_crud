@@ -62,11 +62,12 @@ export const atualizaUsuario = async(req:Request,res:Response) =>{
 
 export const excluiUsuario = async(req:Request, res:Response) =>{
     const {id} = req.params
-//Encontrando usuario pela chave primarioa
-    const user = await Usuario.findByPk(id)
 
-    res.render('pages/excluir',{
-        user,
-        id
+    await Usuario.destroy({
+        where:{
+            id:id
+        }
     })
+
+    res.redirect('/usuarios')
 }
